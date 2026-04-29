@@ -1,0 +1,4 @@
+/* src/index.css — entry point for Tailwind v4 */
+@import "tailwindcss";
+@import "./styles/globals.css";
+@import "./styles/animations.css";

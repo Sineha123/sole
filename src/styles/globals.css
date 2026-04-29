@@ -1,0 +1,178 @@
+/* ==========================================
+   SOLE — Global Styles & Design Tokens
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Space+Mono:wght@400;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Core surfaces */
+  --black:        #000000;
+  --void:         #ffffff;
+  --surface:      #f8f8f8;
+  --surface-2:    #efefef;
+  --surface-3:    #e5e5e5;
+  --border:       rgba(0,0,0,0.06);
+  --border-hover: rgba(0,0,0,0.12);
+
+  /* Brand Red */
+  --red:          #CC0000;
+  --red-bright:   #FF1A1A;
+  --red-muted:    #8B0000;
+  --red-glow:     rgba(204,0,0,0.15);
+
+  /* Gold */
+  --gold:         #C9A84C;
+  --gold-bright:  #F0C060;
+  --gold-muted:   #8B6914;
+  --gold-glow:    rgba(201,168,76,0.12);
+
+  /* Text */
+  --text-primary:   #111111;
+  --text-secondary: #555555;
+  --text-muted:     #888888;
+
+  /* Semantic */
+  --success:      #22C55E;
+  --warning:      #F59E0B;
+  --danger:       #EF4444;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+body {
+  background: var(--void);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.35;
+}
+
+/* ---------- Smooth Scroll (Lenis) ---------- */
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+
+/* ---------- Custom Scrollbar ---------- */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+/* ---------- Selection ---------- */
+::selection { background: var(--red); color: white; }
+
+/* ---------- Typography Utilities ---------- */
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
+.font-mono    { font-family: var(--font-mono); }
+
+/* ---------- Page Transitions ---------- */
+.page-enter         { opacity: 0; transform: translateY(20px); }
+.page-enter-active  { opacity: 1; transform: translateY(0); transition: all 0.5s cubic-bezier(0.22,1,0.36,1); }
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 3px;
+  padding: 14px 32px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--red-bright);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.btn-primary:hover::after { transform: translateY(0); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-primary span { position: relative; z-index: 1; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 3px;
+  padding: 13px 31px;
+  border: 1px solid var(--border-hover);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-ghost:hover { border-color: var(--red); color: var(--red); }
+
+/* ---------- Skeleton animation ---------- */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+.skeleton-pulse {
+  background: var(--surface-3);
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* ---------- Utility classes ---------- */
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container-wide { padding: 0 20px; }
+}
+
+/* Touch-friendly override */
+@media (pointer: coarse) {
+  html { cursor: auto; }
+}
