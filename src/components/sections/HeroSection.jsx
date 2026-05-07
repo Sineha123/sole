@@ -35,53 +35,81 @@ export default function HeroSection() {
       repeat: -1
     })
 
-    // 2. Scroll Sequence Timeline - Increased to 400vh for slower transition
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 2.5, // Increased scrub value to slow down animation feel
-      }
+    const mm = gsap.matchMedia()
+
+    mm.add("(min-width: 1025px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 2.5,
+        }
+      })
+
+      tl.to('.hero-main-shoe', {
+        top: '150vh',
+        left: '90%',
+        scale: 1.6,
+        rotation: 15,
+        ease: 'power2.inOut',
+      }, 0)
+
+      tl.to(heroTextRef.current, { y: -100, opacity: 0, ease: 'power2.in' }, 0)
+      tl.from(sec2TextRef.current, { x: -100, opacity: 0, ease: 'power2.out' }, 0)
+
+      tl.to('.hero-main-shoe', {
+        top: '250vh',
+        left: '35%',
+        scale: 1.2,
+        rotation: -5,
+        ease: 'power2.inOut',
+      }, 1)
+
+      tl.to(sec2TextRef.current, { x: 100, opacity: 0, ease: 'power2.in' }, 1)
+      tl.from(sec3TextRef.current, { y: 50, opacity: 0, ease: 'power2.out' }, 1)
+      tl.from('.callout-tag', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.1,
+        ease: 'back.out(1.5)'
+      }, 1.2)
     })
 
-    // --- TRANSITION: SECTION 1 -> SECTION 2 ---
-    // Shoe moves to the right edge (half visible), scales up
-    tl.to('.hero-main-shoe', {
-      top: '150vh', // Center of Section 2
-      left: '90%',  // Pushed far to the right (only front half visible)
-      scale: 1.6,
-      rotation: 15,
-      ease: 'power2.inOut',
-    }, 0)
+    mm.add("(max-width: 1024px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 2,
+        }
+      })
 
-    // Fade out Hero Text, Fade in Section 2 Text
-    tl.to(heroTextRef.current, { y: -100, opacity: 0, ease: 'power2.in' }, 0)
-    tl.from(sec2TextRef.current, { x: -100, opacity: 0, ease: 'power2.out' }, 0)
+      tl.to('.hero-main-shoe', {
+        top: '145vh',
+        left: '78%',
+        scale: 1.18,
+        rotation: 10,
+        ease: 'power2.inOut',
+      }, 0)
 
+      tl.to(heroTextRef.current, { y: -60, opacity: 0, ease: 'power2.in' }, 0)
+      tl.from(sec2TextRef.current, { x: -40, opacity: 0, ease: 'power2.out' }, 0)
 
-    // --- TRANSITION: SECTION 2 -> SECTION 3 ---
-    // Shoe moves to the left, scales down (but bigger than before)
-    tl.to('.hero-main-shoe', {
-      top: '250vh', // Center of Section 3
-      left: '35%',  // Positioned on the left side
-      scale: 1.2,   // Kept bigger as requested
-      rotation: -5,
-      ease: 'power2.inOut',
-    }, 1) // Start at time 1
+      tl.to('.hero-main-shoe', {
+        top: '245vh',
+        left: '50%',
+        scale: 0.95,
+        rotation: -4,
+        ease: 'power2.inOut',
+      }, 1)
 
-    // Fade out Section 2 Text, Fade in Section 3 Text & Tags
-    tl.to(sec2TextRef.current, { x: 100, opacity: 0, ease: 'power2.in' }, 1)
-    tl.from(sec3TextRef.current, { y: 50, opacity: 0, ease: 'power2.out' }, 1)
-    
-    // Stagger in the callout tags
-    tl.from('.callout-tag', {
-      scale: 0,
-      opacity: 0,
-      stagger: 0.1,
-      ease: 'back.out(1.5)'
-    }, 1.2)
+      tl.to(sec2TextRef.current, { x: 40, opacity: 0, ease: 'power2.in' }, 1)
+      tl.from(sec3TextRef.current, { y: 40, opacity: 0, ease: 'power2.out' }, 1)
+    })
 
+    return () => mm.revert()
   }, [])
 
   return (
@@ -119,15 +147,15 @@ export default function HeroSection() {
           SECTION 1: HERO (0vh - 100vh)
           Red/White split background, left text, cards BELOW shoe
       ==================================================== */}
-      <section style={{ height: '100vh', width: '100%', position: 'absolute', top: 0, overflow: 'hidden', background: 'linear-gradient(to right, white 50%, var(--red) 50%)' }}>
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', textAlign: 'center', pointerEvents: 'none', zIndex: 1 }}>
+      <section className="hero-section-one" style={{ height: '100vh', width: '100%', position: 'absolute', top: 0, overflow: 'hidden', background: 'linear-gradient(to right, white 50%, var(--red) 50%)' }}>
+        <div className="hero-bg-word" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', textAlign: 'center', pointerEvents: 'none', zIndex: 1 }}>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(200px, 30vw, 450px)', color: 'rgba(0,0,0,0.1)', mixBlendMode: 'overlay', lineHeight: 0.8, letterSpacing: 10, margin: 0 }}>SOLE</h1>
         </div>
 
-        <div ref={heroTextRef} style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1600px', margin: '0 auto', height: '100%', display: 'flex', justifyContent: 'space-between', padding: '100px 48px 24px' }}>
+        <div className="hero-text-wrap" ref={heroTextRef} style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1600px', margin: '0 auto', height: '100%', display: 'flex', justifyContent: 'space-between', padding: '100px 48px 24px' }}>
           
           {/* Left Title */}
-          <div style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="hero-left-copy" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(50px, 12vw, 120px)', color: 'var(--black)', lineHeight: 0.9, letterSpacing: 2, marginBottom: 40 }}>
               <span style={{ display: 'block' }}>WEAR</span>
               <span style={{ display: 'block' }}>YOUR</span>
@@ -136,14 +164,14 @@ export default function HeroSection() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.6, fontWeight: 500, marginBottom: 24 }}>
               FIND YOUR SHOES FROM OUR<br/>TRENDY COLLECTIONS
             </p>
-            <Link to="/products" style={{ display: 'inline-flex', alignItems: 'center', gap: 16, background: 'var(--black)', color: 'white', padding: '12px 16px 12px 24px', borderRadius: '50px', fontFamily: 'var(--font-display)', fontSize: 16, letterSpacing: 2, textDecoration: 'none' }}>
+            <Link to="/products" className="hero-primary-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 16, background: 'var(--black)', color: 'white', padding: '12px 16px 12px 24px', borderRadius: '50px', fontFamily: 'var(--font-display)', fontSize: 16, letterSpacing: 2, textDecoration: 'none' }}>
               EXPLORE MORE
               <span style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><FiChevronRight size={18} /></span>
             </Link>
           </div>
 
           {/* Right Half: 3 Floating Cards (single row, aligned right, bottom) */}
-          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'flex-end', gap: 24, zIndex: 20, paddingBottom: '0px', marginTop: 'auto' }}>
+          <div className="hero-right-cards" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'flex-end', gap: 24, zIndex: 20, paddingBottom: '0px', marginTop: 'auto' }}>
             {/* Card 1 */}
             <div className="hero-card" style={{ background: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(10px)', borderRadius: '16px', padding: '12px 20px 12px 12px', display: 'flex', alignItems: 'center', gap: 16, border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
               <div style={{ width: 60, height: 60, borderRadius: '12px', background: '#F5F5F5', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -176,7 +204,7 @@ export default function HeroSection() {
           SECTION 2: BOLD TEXT
       ==================================================== */}
       <section style={{ height: '100vh', width: '100%', position: 'absolute', top: '100vh', overflow: 'hidden', background: '#FFFFFF' }}>
-        <div ref={sec2TextRef} style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1400px', margin: '0 auto', height: '100%', display: 'flex', alignItems: 'center', padding: '0 48px' }}>
+        <div className="hero-section-two-inner" ref={sec2TextRef} style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1400px', margin: '0 auto', height: '100%', display: 'flex', alignItems: 'center', padding: '0 48px' }}>
           
           <div style={{ maxWidth: '800px' }}>
             <h2 style={{
@@ -203,7 +231,7 @@ export default function HeroSection() {
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(300px, 40vw, 600px)', color: 'rgba(0,0,0,0.02)', lineHeight: 0.8, letterSpacing: 0, margin: 0, fontStyle: 'italic' }}>SOLE</h1>
         </div>
 
-        <div style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1400px', margin: '0 auto', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '0 48px' }}>
+        <div className="hero-section-three-inner" style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1400px', margin: '0 auto', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '0 48px' }}>
           
           {/* Feature Callouts (Positioned absolutely around the shoe area on the left) */}
           <div ref={tagsRef} style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
@@ -218,7 +246,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Side Text */}
-          <div ref={sec3TextRef} style={{ maxWidth: '500px', textAlign: 'right' }}>
+          <div className="hero-section-three-copy" ref={sec3TextRef} style={{ maxWidth: '500px', textAlign: 'right' }}>
             <h2 style={{
               fontFamily: 'var(--font-display)',
               fontSize: 'clamp(50px, 10vw, 130px)',
@@ -238,12 +266,94 @@ export default function HeroSection() {
 
       <style>{`
         @media (max-width: 1024px) {
-          .hero-main-shoe { width: 90vw !important; }
+          .hero-main-shoe {
+            top: 58vh !important;
+            width: 78vw !important;
+            max-width: 680px !important;
+          }
+          .hero-text-wrap {
+            padding: 72px 32px 32px !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
+            gap: 32px !important;
+          }
+          .hero-left-copy {
+            max-width: 420px !important;
+            min-height: 44vh !important;
+          }
+          .hero-right-cards {
+            width: 100% !important;
+          }
+          .hero-section-two-inner,
+          .hero-section-three-inner {
+            padding: 0 32px !important;
+          }
+          .hero-section-three-copy {
+            max-width: 420px !important;
+          }
           .hero-card { display: none !important; }
           .callout-tag { display: none !important; }
         }
         @media (max-width: 768px) {
-          .hero-main-shoe { top: 60vh !important; width: 100vw !important; }
+          .hero-section-one {
+            background: linear-gradient(to bottom, white 58%, var(--red) 58%) !important;
+          }
+          .hero-bg-word {
+            top: 42% !important;
+          }
+          .hero-text-wrap {
+            padding: 32px 20px 24px !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+          .hero-left-copy {
+            max-width: 100% !important;
+            min-height: auto !important;
+            align-items: center !important;
+            margin-top: 0 !important;
+          }
+          .hero-left-copy h2 {
+            margin-bottom: 20px !important;
+          }
+          .hero-left-copy p {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            margin-bottom: 18px !important;
+          }
+          .hero-primary-link {
+            padding: 10px 14px 10px 18px !important;
+            font-size: 14px !important;
+            gap: 12px !important;
+          }
+          .hero-main-shoe {
+            top: 66vh !important;
+            width: 92vw !important;
+            max-width: none !important;
+          }
+          .hero-section-two-inner,
+          .hero-section-three-inner {
+            padding: 0 20px !important;
+            justify-content: center !important;
+            text-align: center !important;
+          }
+          .hero-section-three-inner {
+            align-items: flex-end !important;
+            padding-bottom: 64px !important;
+          }
+          .hero-section-three-copy {
+            max-width: 100% !important;
+            text-align: center !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero-main-shoe {
+            top: 68vh !important;
+            width: 98vw !important;
+          }
+          .hero-text-wrap {
+            padding-top: 28px !important;
+          }
         }
       `}</style>
     </div>
