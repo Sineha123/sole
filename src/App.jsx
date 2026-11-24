@@ -6,6 +6,7 @@ import { lazy, Suspense } from 'react'
 import Cursor from './components/layout/Cursor'
 import Navbar from './components/layout/Navbar'
 import CartDrawer from './components/ui/CartDrawer'
+import ChatBotWidget from './components/ui/ChatBotWidget'
 import { ToastProvider } from './components/ui/Toast'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 
@@ -42,6 +43,7 @@ function AppContent() {
       <Cursor />
       <Navbar />
       <CartDrawer />
+      <ChatBotWidget />
 
       <AnimatePresence mode="wait">
         <motion.div
