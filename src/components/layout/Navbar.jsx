@@ -75,6 +75,7 @@ export default function Navbar() {
     { to: '/products', label: 'SHOP' },
     { to: '/drops', label: 'DROPS' },
     { to: '/about', label: 'ABOUT' },
+    { to: '/vouchers', label: 'VOUCHERS' },
   ]
 
   const isActive = (to) => location.pathname === to
@@ -318,6 +319,7 @@ export default function Navbar() {
             { to: '/favorites', label: 'FAVORITES' },
             { to: '/cart', label: 'CART' },
             { to: '/about', label: 'ABOUT' },
+            { to: '/vouchers', label: 'VOUCHERS' },
             { to: '/contact', label: 'CONTACT' },
             { to: '/login', label: 'LOGIN' },
           ].map(link => (

@@ -137,6 +137,7 @@ export default function Footer() {
             }}>INFO</h3>
             {[
               { to: '/about', label: 'About SOLE' },
+              { to: '/vouchers', label: 'Vouchers & Deals' },
               { to: '/contact', label: 'Contact Us' },
               { to: '/messages', label: 'Messages' },
             ].map(link => (

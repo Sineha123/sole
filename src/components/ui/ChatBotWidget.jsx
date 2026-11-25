@@ -1,20 +1,22 @@
 // src/components/ui/ChatBotWidget.jsx
-// Curated Knowledge Base Chatbot for SOLE (Enlarged, Highly Readable, Instant Response)
+// Curated Brand Assistant for SOLE (Enlarged, Highly Readable, Instant Response)
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiSend, FiMinimize2, FiMaximize2, FiRotateCcw } from 'react-icons/fi'
-import { queryKnowledgeBase } from '../../data/soleKnowledgeEngine'
+import { BsChatDotsFill } from 'react-icons/bs'
+import { queryKnowledgeBase, stripEmojis } from '../../data/soleKnowledgeEngine'
 
 const INITIAL_MESSAGE = {
   role: 'assistant',
-  content: "👋 Hello! Welcome to **SOLE** — *Walk Your Story*.\n\nI am your official brand assistant, powered directly by our knowledge base. How can I help you today?",
-  sources: [{ title: 'Section 1: Brand Overview', category: 'Official Knowledge Base' }],
+  content: "Hello! Welcome to **SOLE** — *Walk Your Story*.\n\nI am your official brand assistant, ready to help with shoes, sizing, orders, delivery, and current voucher offers. How can I help you today?",
+  sources: [{ title: 'Section 1: Brand Overview', category: 'Official Store Guide' }],
   suggestions: [
-    '👟 Urban Runner prices & colors',
-    '🚚 Delivery time & shipping rates',
-    '🔄 7-day Return & Exchange policy',
-    '📏 Sizing & fit guide',
-    '📍 Store locations in Pakistan'
+    'Available vouchers & discounts',
+    'Urban Runner prices & colors',
+    'Delivery time & shipping rates',
+    '7-day Return & Exchange policy',
+    'Sizing & fit guide',
+    'Store locations in Pakistan'
   ]
 }
 
@@ -49,7 +51,7 @@ export default function ChatBotWidget() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isOpen])
 
-  // Direct Knowledge Base Query Resolution (Instant & Curated)
+  // Direct Store Guide Query Resolution (Instant & Curated)
   const handleSend = (queryOverride) => {
     const text = (queryOverride || input).trim()
     if (!text || loading) return
@@ -67,9 +69,9 @@ export default function ChatBotWidget() {
         ...updatedHistory,
         {
           role: 'assistant',
-          content: result.reply,
+          content: stripEmojis(result.reply),
           sources: result.sources || [],
-          suggestions: result.suggestions || []
+          suggestions: (result.suggestions || []).map(s => stripEmojis(s))
         }
       ])
       setLoading(false)
@@ -84,10 +86,11 @@ export default function ChatBotWidget() {
   // Enhanced Markdown & Table Formatter with Enlarged Readable Typography
   const renderFormatted = (text) => {
     if (!text) return null
+    const cleanedText = stripEmojis(text)
 
     // Check for markdown table
-    if (text.includes('|') && text.includes('---')) {
-      const lines = text.split('\n')
+    if (cleanedText.includes('|') && cleanedText.includes('---')) {
+      const lines = cleanedText.split('\n')
       const tableLines = []
       const regularLinesBefore = []
       const regularLinesAfter = []
@@ -141,52 +144,73 @@ export default function ChatBotWidget() {
       }
     }
 
-    return renderSimpleLines(text)
+    return renderSimpleLines(cleanedText)
+  }
+
+  const formatInline = (str) => {
+    if (!str) return ''
+    let parsed = str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    parsed = parsed.replace(/\*(.*?)\*/g, '<em>$1</em>')
+    parsed = parsed.replace(/`([^`]+)`/g, '<code style="background:rgba(204,0,0,0.25);color:#ff9494;padding:3px 7px;border-radius:5px;font-size:14px;font-weight:600;">$1</code>')
+    // Clickable links for email and WhatsApp
+    parsed = parsed.replace(/support@soleofficial\.pk/g, '<a href="mailto:support@soleofficial.pk" style="color:#ff9494;text-decoration:underline;" target="_blank">support@soleofficial.pk</a>')
+    parsed = parsed.replace(/\+92\s*300\s*SOLE\s*PK(\s*\([0-9\s]+\))?/gi, '<a href="https://wa.me/92300765375" style="color:#22c55e;text-decoration:underline;font-weight:600;" target="_blank">+92 300 SOLE PK (WhatsApp)</a>')
+    // Markdown links [label](url)
+    parsed = parsed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#ff9494;text-decoration:underline;" target="_blank">$1</a>')
+    return parsed
   }
 
   const renderSimpleLines = (raw) => {
-    return raw.split('\n').map((line, idx) => {
-      let parsed = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      parsed = parsed.replace(/\*(.*?)\*/g, '<em>$1</em>')
-      parsed = parsed.replace(/`([^`]+)`/g, '<code style="background:rgba(204,0,0,0.25);color:#ff9494;padding:3px 7px;border-radius:5px;font-size:14px;font-weight:600;">$1</code>')
-      // Clickable links for email and WhatsApp
-      parsed = parsed.replace(/support@soleofficial\.pk/g, '<a href="mailto:support@soleofficial.pk" style="color:#ff9494;text-decoration:underline;" target="_blank">support@soleofficial.pk</a>')
-      parsed = parsed.replace(/\+92\s*300\s*SOLE\s*PK(\s*\([0-9\s]+\))?/gi, '<a href="https://wa.me/92300765375" style="color:#22c55e;text-decoration:underline;font-weight:600;" target="_blank">💬 +92 300 SOLE PK (WhatsApp)</a>')
+    return raw
+      .replace(/\r\n/g, '\n')
+      .split('\n')
+      .map((line, idx) => {
+        const trimmed = line.trim()
+        if (!trimmed) {
+          return <span key={idx} style={{ display: 'block', minHeight: 10, marginBottom: 4 }} />
+        }
 
-      if (parsed.startsWith('### ')) {
+        // Heading 4
+        if (trimmed.startsWith('### ')) {
+          return (
+            <h4
+              key={idx}
+              style={{ fontSize: 19, fontWeight: 700, color: '#fff', margin: '12px 0 6px', letterSpacing: 0.3 }}
+              dangerouslySetInnerHTML={{ __html: formatInline(trimmed.substring(4).trim()) }}
+            />
+          )
+        }
+
+        // List item: matches '*', '-', '•' with any indentation
+        const isBullet = /^[\*\-•]\s+/.test(trimmed)
+        const content = isBullet ? trimmed.replace(/^[\*\-•]\s+/, '') : trimmed
+        const parsed = formatInline(content)
+
+        if (isBullet) {
+          return (
+            <li
+              key={idx}
+              style={{ marginLeft: 22, marginBottom: 7, fontSize: 16.5, lineHeight: 1.6 }}
+              dangerouslySetInnerHTML={{ __html: parsed }}
+            />
+          )
+        }
+
         return (
-          <h4
+          <span
             key={idx}
-            style={{ fontSize: 19, fontWeight: 700, color: '#fff', margin: '8px 0 6px', letterSpacing: 0.3 }}
-            dangerouslySetInnerHTML={{ __html: parsed.substring(4) }}
+            style={{ display: 'block', minHeight: line === '' ? 12 : undefined, marginBottom: 6, lineHeight: 1.6 }}
+            dangerouslySetInnerHTML={{ __html: parsed }}
           />
         )
-      }
-
-      if (parsed.startsWith('* ') || parsed.startsWith('- ') || parsed.startsWith('• ')) {
-        return (
-          <li
-            key={idx}
-            style={{ marginLeft: 22, marginBottom: 7, fontSize: 16.5, lineHeight: 1.6 }}
-            dangerouslySetInnerHTML={{ __html: parsed.substring(2) }}
-          />
-        )
-      }
-
-      return (
-        <span
-          key={idx}
-          style={{ display: 'block', minHeight: line === '' ? 12 : undefined, marginBottom: 5 }}
-          dangerouslySetInnerHTML={{ __html: parsed }}
-        />
-      )
-    })
+      })
   }
 
   return (
     <>
       {/* FLOATING BOT BUTTON (Bottom-Right Corner - EXTRA LARGE & BOLD) */}
       <div
+        className="chatbot-scope"
         style={{
           position: 'fixed',
           bottom: 28,
@@ -196,6 +220,7 @@ export default function ChatBotWidget() {
         }}
       >
         <motion.button
+          className="chatbot-scope"
           onClick={() => setIsOpen(prev => !prev)}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -217,7 +242,7 @@ export default function ChatBotWidget() {
             outline: 'none',
             padding: 0
           }}
-          aria-label="Toggle SOLE Knowledge Base Chatbot"
+          aria-label="Toggle SOLE Brand Chatbot"
         >
           {/* Pulsing Glow Ring */}
           <span
@@ -251,15 +276,11 @@ export default function ChatBotWidget() {
           {isOpen ? (
             <FiX size={36} color="#fff" />
           ) : (
-            <svg
-              viewBox="0 0 24 24"
-              width="42"
-              height="42"
-              fill="#ffffff"
+            <BsChatDotsFill
+              size={36}
+              color="#ffffff"
               style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.34 5L2 22l5.18-1.31C8.61 21.49 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
-            </svg>
+            />
           )}
         </motion.button>
       </div>
@@ -268,6 +289,7 @@ export default function ChatBotWidget() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            className="chatbot-scope"
             initial={{ opacity: 0, y: 25, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -340,7 +362,7 @@ export default function ChatBotWidget() {
                     />
                   </div>
                   <span style={{ color: '#a0a0a8', fontSize: 14 }}>
-                    Curated Knowledge Base (Instant)
+                    Official Store Assistant (Instant)
                   </span>
                 </div>
               </div>
@@ -491,7 +513,7 @@ export default function ChatBotWidget() {
                               border: '1px solid rgba(255,255,255,0.08)'
                             }}
                           >
-                            📖 {src.title}
+                            {src.title}
                           </span>
                         ))}
                       </div>
@@ -568,7 +590,7 @@ export default function ChatBotWidget() {
                       animation: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite'
                     }}
                   />
-                  <span>Retrieving answer from SOLE knowledge base...</span>
+                  <span>Retrieving details from SOLE store directory...</span>
                 </div>
               )}
 

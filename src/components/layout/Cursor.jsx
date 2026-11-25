@@ -16,11 +16,23 @@ export default function Cursor() {
     const xDot = gsap.quickTo(dot.current, 'x', { duration: 0.1 })
     const yDot = gsap.quickTo(dot.current, 'y', { duration: 0.1 })
 
+    let isOverChatbot = false
+
     const move = (e) => {
       xTo(e.clientX - 30)
       yTo(e.clientY - 30)
       xDot(e.clientX - 5)
       yDot(e.clientY - 5)
+
+      const overChatbot = !!(e.target && e.target.closest && e.target.closest('.chatbot-scope'))
+      if (overChatbot !== isOverChatbot) {
+        isOverChatbot = overChatbot
+        if (isOverChatbot) {
+          gsap.to([ring.current, dot.current], { opacity: 0, duration: 0.15, overwrite: 'auto' })
+        } else {
+          gsap.to([ring.current, dot.current], { opacity: 1, duration: 0.15, overwrite: 'auto' })
+        }
+      }
     }
 
     const enterProduct = () => {
@@ -60,6 +72,7 @@ export default function Cursor() {
         el.addEventListener('mouseleave', leaveProduct)
       })
       document.querySelectorAll('button, a, [data-cursor="btn"]').forEach(el => {
+        if (el.closest('.chatbot-scope')) return
         el.addEventListener('mouseenter', enterButton)
         el.addEventListener('mouseleave', leaveButton)
       })

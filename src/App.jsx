@@ -20,6 +20,7 @@ const OrderConfirmation = lazy(() => import('./pages/OrderConfirmation'))
 const Favorites = lazy(() => import('./pages/Favorites'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Vouchers = lazy(() => import('./pages/Vouchers'))
 const Login = lazy(() => import('./pages/Login'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
@@ -91,6 +92,7 @@ function AppContent() {
               <Route path="/order/:orderId" element={<OrderConfirmation />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/about" element={<About />} />
+              <Route path="/vouchers" element={<Vouchers />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="*" element={<NotFound />} />

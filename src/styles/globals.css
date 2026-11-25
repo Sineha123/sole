@@ -176,3 +176,26 @@ html.lenis { height: auto; }
 @media (pointer: coarse) {
   html { cursor: auto; }
 }
+
+/* ---------- ChatBot Functional Cursor Scope ---------- */
+.chatbot-scope,
+.chatbot-scope * {
+  cursor: auto !important;
+}
+
+.chatbot-scope button,
+.chatbot-scope a,
+.chatbot-scope [role="button"] {
+  cursor: pointer !important;
+}
+
+.chatbot-scope input,
+.chatbot-scope textarea {
+  cursor: text !important;
+}
+
+.chatbot-scope input:disabled,
+.chatbot-scope button:disabled {
+  cursor: not-allowed !important;
+}
+

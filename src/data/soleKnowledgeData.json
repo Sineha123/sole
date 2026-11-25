@@ -1,0 +1,920 @@
+[
+  {
+    "id": "exchange_wrong_size",
+    "title": "14-Day Free Exchange If Size Is Wrong",
+    "section": "Section 6.2: Size Exchange Policy",
+    "keywords": [
+      "14-day exchange if size is wrong",
+      "wrong size",
+      "size exchange",
+      "exchange if size wrong",
+      "change size",
+      "how to exchange wrong size",
+      "size not fitting"
+    ],
+    "patterns": [
+      "exchange.*(size|wrong|fit)",
+      "change.*size",
+      "wrong\\s*size"
+    ],
+    "response": "### 14-Day Free Size Exchange Policy\n\nIf your shoe size or fit is not completely comfortable, we make exchanging effortless:\n\n* **100% Free First Exchange:** We will arrange a courier pickup right from your doorstep at zero extra cost.\n* **Window:** Valid within **14 days** from the date of delivery.\n* **Step-by-step Exchange Request:**\n  1. Ensure the pair is unworn outdoors, with brand tags and shoe box intact.\n  2. Send your Order ID and required size to WhatsApp: **+92 300 SOLE PK (765 3 75)**.\n  3. Our courier will deliver your replacement pair and collect the initial pair in one single doorstep visit!",
+    "suggestions": [
+      "Size conversion chart",
+      "Customer support WhatsApp",
+      "Return policy"
+    ]
+  },
+  {
+    "id": "delivery_by_city",
+    "title": "City Delivery Times (Karachi, Lahore, Islamabad & Nationwide)",
+    "section": "Section 5.1: Delivery Times by City",
+    "keywords": [
+      "delivery time to my city",
+      "delivery time to lahore",
+      "delivery time to karachi",
+      "delivery to islamabad",
+      "how long to deliver",
+      "delivery days",
+      "delivery speed",
+      "city delivery"
+    ],
+    "patterns": [
+      "deliver.*(city|lahore|karachi|islamabad|rawalpindi|faisalabad)",
+      "how\\s*long.*(reach|arrive|deliver|take)",
+      "(city|lahore|karachi|islamabad).*deliver"
+    ],
+    "response": "### City Delivery Times Across Pakistan\n\n* **Karachi:** **1–2 Business Days** *(Same-day express dispatch on orders placed before 2:00 PM)* — Delivery fee: PKR 150.\n* **Major Cities (Lahore, Islamabad, Rawalpindi, Faisalabad):** **2–3 Business Days** — Delivery fee: PKR 200.\n* **Peshawar, Multan, Quetta, Gujranwala, Sialkot:** **3–4 Business Days** — Delivery fee: PKR 250.\n* **Rest of Pakistan & Remote Areas:** **3–5 Business Days** — Delivery fee: PKR 300.\n\n*Free Shipping:* All orders above **PKR 5,000** automatically qualify for **100% FREE Delivery** nationwide!",
+    "suggestions": [
+      "How to track my order?",
+      "Payment methods (COD available)",
+      "Available vouchers"
+    ]
+  },
+  {
+    "id": "shoe_care_sneakers",
+    "title": "How to Clean & Wash Sneakers (Urban Runner & Sport Elite)",
+    "section": "Section 8.1: Sneaker Cleaning",
+    "keywords": [
+      "clean urban runner",
+      "clean sneakers",
+      "wash sneakers",
+      "washing shoes",
+      "clean mesh shoes",
+      "shoe cleaning mesh",
+      "how to clean sneakers",
+      "can i wash sneakers"
+    ],
+    "patterns": [
+      "clean.*(urban|runner|sneaker|mesh)",
+      "wash.*(urban|runner|sneaker|mesh)",
+      "(urban|runner|sneaker|mesh).*clean"
+    ],
+    "response": "### How to Clean SOLE Sneakers (Urban Runner & Sport Elite)\n\nTo maintain breathability and cushioning in knit mesh sneakers:\n\n* **Brush Away Surface Dirt:** Use a dry soft-bristle brush to remove dry dust and dirt before using water.\n* **Gentle Hand Wash:** Mix lukewarm water with a mild liquid detergent. Gently scrub with a soft brush or sponge.\n* **Important:** **Do NOT machine wash** or tumble dry, as the spin cycle can deform the EVA midsole and damage mesh bonding.\n* **Drying:** Air dry in a shaded, well-ventilated area away from direct scorching sunlight or heaters.",
+    "suggestions": [
+      "Urban Runner price & colors",
+      "Shoe care for leather",
+      "Warranty policy"
+    ]
+  },
+  {
+    "id": "size_guide_heels",
+    "title": "Sizing & Fit Guide for Grace Heels & Pumps",
+    "section": "Section 3.1: Women's Sizing",
+    "keywords": [
+      "size chart for heels",
+      "heels size chart",
+      "heels sizing",
+      "grace sizing",
+      "grace fit",
+      "what size in heels",
+      "heel sizes",
+      "women heel sizing"
+    ],
+    "patterns": [
+      "size.*(heel|grace|pump|ballet)",
+      "fit.*(heel|grace)",
+      "(heel|grace).*size"
+    ],
+    "response": "### Women's Grace Sizing & Fit Guide\n\nSOLE Grace block heels, pumps, and ballet flats fit **true to size** and feature built-in ergonomic arch support cushions:\n\n* **UK 3** = EU 36 | 22.0 cm\n* **UK 4** = EU 37 | 23.0 cm\n* **UK 5** = EU 38 | 24.0 cm\n* **UK 6** = EU 39 | 25.0 cm\n* **UK 7** = EU 40.5 | 26.0 cm\n* **UK 8** = EU 42 | 27.0 cm\n* **UK 9** = EU 43 | 28.0 cm\n\n*Fit Advice:* Order your standard size. If between sizes or if you have broader feet, we recommend sizing up one half size or taking advantage of our **14-day 100% FREE first exchange**!",
+    "suggestions": [
+      "Return policy for heels",
+      "Grace price & colors",
+      "Delivery times"
+    ]
+  },
+  {
+    "id": "size_guide_kids",
+    "title": "Kids Footwear Size Guide & Measuring Chart (Mini Steps)",
+    "section": "Section 3.2: Kids Sizing & Fit",
+    "keywords": [
+      "size guide for kids",
+      "kids size",
+      "kids shoe sizes",
+      "mini steps size",
+      "children shoe size",
+      "toddler sizes",
+      "measure kids feet",
+      "how to choose kids size"
+    ],
+    "patterns": [
+      "size.*(kid|child|mini\\s*step|toddler)",
+      "how\\s*to\\s*measure.*(kid|child|toddler)",
+      "(kid|child|toddler).*size"
+    ],
+    "response": "### Kids Size & Fit Guide (SOLE Mini Steps)\n\nAll SOLE Mini Steps kids shoes follow standard UK kids sizing with easy-adjust hook-and-loop Velcro straps:\n\n* **UK 1C – 3C:** Approx. 10.5 – 12.0 cm (Ages 1–2 years)\n* **UK 4C – 6C:** Approx. 12.5 – 14.5 cm (Ages 2–3.5 years)\n* **UK 7C – 9C:** Approx. 15.0 – 16.5 cm (Ages 4–5 years)\n* **UK 10C – 13C:** Approx. 17.0 – 19.5 cm (Ages 6–8 years)\n* **UK 1 – 6 (Older Kids):** Approx. 20.0 – 24.5 cm\n\n*How to measure your child's foot:*\n1. Have your child stand upright on a blank sheet of paper.\n2. Mark heel and tip of longest toe.\n3. Measure distance in centimeters (cm).\n\n*Fit Tip:* Leave about 0.5 cm of room for growing toes. We offer 14-day free size exchanges if it's too snug!",
+    "suggestions": [
+      "Mini Steps Buy 2 Get 1 Free promo",
+      "Delivery charges",
+      "14-day exchange policy"
+    ]
+  },
+  {
+    "id": "return_policy_heels",
+    "title": "Return & Exchange Policy for Grace Heels & Shoes",
+    "section": "Section 6.1: Returns & Exchanges for Heels",
+    "keywords": [
+      "return policy for heels",
+      "return heels",
+      "exchange heels",
+      "grace return",
+      "return grace",
+      "refund heels",
+      "can i return heels",
+      "how to return heels",
+      "heels refund",
+      "women shoes return",
+      "heels exchange"
+    ],
+    "patterns": [
+      "return.*(heel|grace)",
+      "exchange.*(heel|grace)",
+      "refund.*(heel|grace)",
+      "policy.*(heel|grace)",
+      "(heel|grace).*return",
+      "(heel|grace).*exchange"
+    ],
+    "response": "### Return & Exchange Policy for SOLE Grace Heels & Flats\n\nYes! Our **7-Day Return Policy** and **14-Day Free Exchange Policy** apply fully to all SOLE Grace women's heels, cushioned pumps, and flats:\n\n* **7-Day Full Refund:** Return any pair within **7 days** of delivery for a 100% full refund.\n* **14-Day Free First Exchange:** If the size, height, or color doesn't fit comfortably, we arrange a **100% FREE first exchange** with doorstep courier pickup across Pakistan.\n* **Condition for Returning Heels:**\n  * Must be tried indoors on a clean, carpeted surface so outer soles and heel tips remain completely unscuffed.\n  * Must be in original packaging with brand tags and shoe box intact.\n* **Defective Item?** Immediate free replacement or full refund processed within 48 hours.\n* **How to Request:** Send your Order ID to our WhatsApp team at **+92 300 SOLE PK (765 3 75)**.",
+    "suggestions": [
+      "Size conversion chart for heels",
+      "Delivery time to my city",
+      "Contact support on WhatsApp"
+    ]
+  },
+  {
+    "id": "brand_overview",
+    "title": "Brand Overview & Mission",
+    "section": "Section 1: Brand Overview",
+    "keywords": [
+      "about",
+      "brand",
+      "sole",
+      "story",
+      "history",
+      "founded",
+      "company",
+      "mission",
+      "vision",
+      "values",
+      "who are you",
+      "what is sole"
+    ],
+    "patterns": [
+      "who\\s+are\\s+you",
+      "what\\s+is\\s+sole",
+      "tell\\s+me\\s+about\\s+sole",
+      "about\\s+the\\s+brand"
+    ],
+    "response": "**SOLE — Walk Your Story** \n\nFounded in **2018** in Karachi, Pakistan, SOLE is dedicated to crafting premium, stylish, and supremely comfortable footwear accessible to everyone.\n\n* **Headquarters:** Karachi, Pakistan\n* **Mission:** Empowering every individual to walk confidently through life with shoes engineered for all-day comfort.\n* **Quality Standard:** Every single pair passes through **47 quality checkpoints** before dispatch.\n* **Sustainability:** 30% recycled materials used across our collections.\n* **Customer Support:** Mon–Sat: 9:00 AM – 8:00 PM (PKT)\n* **WhatsApp Support:** +92 300 SOLE PK (765 3 75)\n* **Email Support:** support@soleofficial.pk",
+    "suggestions": [
+      "Urban Runner sneakers",
+      "Delivery & shipping fees",
+      "Store locations",
+      "14-day exchange policy"
+    ]
+  },
+  {
+    "id": "product_urban_runner",
+    "title": "SOLE Urban Runner Sneaker",
+    "section": "Section 2.1 & 2.2: Product Catalogue",
+    "keywords": [
+      "urban runner",
+      "urban",
+      "runner",
+      "sneakers",
+      "sneaker",
+      "running shoe",
+      "jogging",
+      "best seller"
+    ],
+    "patterns": [
+      "urban\\s*runner",
+      "best\\s*seller\\s*sneaker",
+      "running\\s*shoes?\\s*(price|specs?|colors?)"
+    ],
+    "response": "### SOLE Urban Runner (Bestseller)\n\nOur flagship sneaker engineered for city life, everyday commute, and light running.\n\n* **Price:** **PKR 5,499 – 7,999**\n* **Available Colors:** White, Black, Navy, Red\n* **Sizes:** UK 4 – UK 13 *(Standard and Wide-Fit available)*\n* **Upper Material:** Lightweight breathable knit mesh with synthetic overlays\n* **Midsole:** Responsive impact-absorbing EVA midsole\n* **Outsole:** High-traction, anti-slip flexible rubber\n* **Weight:** Approx. 280g per shoe\n* **Best For:** Daily casual styling, long walking, light jogging.",
+    "suggestions": [
+      "How to choose my size?",
+      "Delivery time to my city",
+      "Return & exchange policy",
+      "Other shoe collections"
+    ]
+  },
+  {
+    "id": "product_flex_walk",
+    "title": "SOLE Flex Walk Casual Shoe",
+    "section": "Section 2.1 & 2.2: Product Catalogue",
+    "keywords": [
+      "flex walk",
+      "flex",
+      "casual",
+      "leather",
+      "loafers",
+      "office shoes",
+      "work shoes"
+    ],
+    "patterns": [
+      "flex\\s*walk",
+      "casual\\s*shoes?",
+      "office\\s*shoes?"
+    ],
+    "response": "### SOLE Flex Walk (Casual Classic)\n\nA timeless casual shoe blending tailored aesthetics with sneaker-level cushion.\n\n* **Price:** **PKR 3,999 – 5,499**\n* **Available Colors:** Brown, Beige, Olive, Black\n* **Sizes:** UK 4 – UK 13 *(Wide-fit options available)*\n* **Upper Material:** Premium faux-leather / treated leather finish\n* **Insole:** Dual-density memory foam footbed\n* **Best For:** Smart casual, office wear, weekend events.",
+    "suggestions": [
+      "Urban Runner sneakers",
+      "Size conversion chart",
+      "Payment methods & COD"
+    ]
+  },
+  {
+    "id": "product_trekker_pro",
+    "title": "SOLE Trekker Pro Outdoor Boots",
+    "section": "Section 2.1 & 2.2: Product Catalogue",
+    "keywords": [
+      "trekker pro",
+      "trekker",
+      "hiking",
+      "outdoor",
+      "boots",
+      "waterproof",
+      "trekking",
+      "trail"
+    ],
+    "patterns": [
+      "trekker\\s*pro",
+      "hiking",
+      "outdoor\\s*boots?",
+      "waterproof"
+    ],
+    "response": "### SOLE Trekker Pro (Hiking & Outdoor)\n\nBuilt rugged for mountain trails, uneven terrains, and severe weather.\n\n* **Price:** **PKR 8,499 – 12,999**\n* **Available Colors:** Khaki, Grey, Orange\n* **Sizes:** UK 5 – UK 13\n* **Upper Material:** Water-resistant ballistic nylon with reinforced toe caps\n* **Outsole:** Heavy-duty deep-lug rubber outsole (Vibram-grade grip)\n* **Key Feature:** Waterproof breathable inner membrane.",
+    "suggestions": [
+      "Shoe care & cleaning",
+      "Delivery & shipping rates",
+      "Size guide"
+    ]
+  },
+  {
+    "id": "product_grace",
+    "title": "SOLE Grace (Women's Collection)",
+    "section": "Section 2.1 & 2.2: Product Catalogue",
+    "keywords": [
+      "grace",
+      "women collection",
+      "block heels",
+      "cushioned pumps",
+      "ballet flats",
+      "ladies shoes"
+    ],
+    "patterns": [
+      "^(tell\\s+me\\s+about\\s+)?(sole\\s+)?grace",
+      "grace\\s+(price|colors?|details?|specs?|styles?)",
+      "show\\s+me\\s+(grace|heels)",
+      "women.*shoe.*price"
+    ],
+    "response": "### SOLE Grace (Women's Collection)\n\nElevated sophistication without sacrificing all-day comfort.\n\n* **Price:** **PKR 4,499 – 9,999**\n* **Styles:** Block heels, cushioned pumps, everyday pointed & round ballet flats\n* **Available Colors:** Nude, Black, Rose Gold, Silver\n* **Sizes:** UK 3 – UK 9\n* **Feature:** Built-in ergonomic arch support cushion to prevent heel fatigue.",
+    "suggestions": [
+      "Size conversion chart",
+      "Return policy for heels",
+      "Delivery times"
+    ]
+  },
+  {
+    "id": "product_mini_steps",
+    "title": "SOLE Mini Steps (Kids' Range)",
+    "section": "Section 2.1 & 2.2: Product Catalogue",
+    "keywords": [
+      "mini steps",
+      "mini",
+      "kids",
+      "children",
+      "boys",
+      "girls",
+      "child",
+      "toddler"
+    ],
+    "patterns": [
+      "mini\\s*steps",
+      "kids?\\s+(shoes?|range|collection|prices?|models?)",
+      "children\\s+(shoes?|collection)"
+    ],
+    "response": "### SOLE Mini Steps (Kids' Range)\n\nPlayproof, lightweight shoes for growing feet.\n\n* **Price:** **PKR 1,999 – 3,499**\n* **Sizes:** UK 1C – UK 6\n* **Closure:** Easy-adjust hook-and-loop Velcro straps\n* **Outsole:** Non-marking anti-slip flexible rubber\n* **Special Offer:** **Buy 2, Get 1 FREE** on the Mini Steps collection all year round!",
+    "suggestions": [
+      "Ongoing offers & discount codes",
+      "Size guide for kids",
+      "Delivery fees"
+    ]
+  },
+  {
+    "id": "product_sport_elite",
+    "title": "SOLE Sport Elite (Athletic / Gym)",
+    "section": "Section 2.1 & 2.2: Product Catalogue",
+    "keywords": [
+      "sport elite",
+      "sport",
+      "gym",
+      "training",
+      "workout",
+      "athletic",
+      "fitness"
+    ],
+    "patterns": [
+      "sport\\s*elite",
+      "gym\\s*shoes?",
+      "workout",
+      "training\\s*shoes?"
+    ],
+    "response": "### SOLE Sport Elite (Gym & Athletic)\n\nHigh-performance trainers engineered for heavy lifts, agility drills, and cardio.\n\n* **Price:** **PKR 6,999 – 10,499**\n* **Available Colors:** Neon Green, Carbon Black, Cobalt Blue\n* **Sizes:** UK 5 – UK 13\n* **Midsole:** High-rebound foam with lateral stability cage\n* **Best For:** Weight training, HIIT, cross-training.",
+    "suggestions": [
+      "Urban Runner comparison",
+      "Sizing & fit guide",
+      "Delivery time"
+    ]
+  },
+  {
+    "id": "all_products",
+    "title": "Complete Product Catalogue & Prices",
+    "section": "Section 2.1: Product Catalogue",
+    "keywords": [
+      "products",
+      "catalog",
+      "catalogue",
+      "all shoes",
+      "collection",
+      "prices",
+      "rate list",
+      "price list",
+      "models",
+      "types"
+    ],
+    "patterns": [
+      "all\\s*products",
+      "catalog",
+      "price\\s*list",
+      "shoe\\s*lines",
+      "what\\s*shoes"
+    ],
+    "response": "### SOLE Core Product Lines at a Glance\n\n| Line | Category | Price (PKR) | Sizes | Highlights |\n| :--- | :--- | :--- | :--- | :--- |\n| **Urban Runner** | Sneakers | **5,499 – 7,999** | UK 4–13 | Breathable mesh, EVA midsole, bestseller |\n| **Flex Walk** | Casual | **3,999 – 5,499** | UK 4–13 | Faux leather, memory foam insole |\n| **Trekker Pro** | Outdoor/Hiking | **8,499 – 12,999** | UK 5–13 | Waterproof membrane, rugged grip |\n| **Grace** | Women's Collection | **4,499 – 9,999** | UK 3–9 | Cushioned arch support, heels & flats |\n| **Mini Steps** | Kids | **1,999 – 3,499** | UK 1C–6 | Velcro straps, Buy 2 Get 1 Free |\n| **Sport Elite** | Gym & Athletic | **6,999 – 10,499** | UK 5–13 | High-rebound foam, lateral stability |",
+    "suggestions": [
+      "Urban Runner details",
+      "How does delivery work?",
+      "Size chart"
+    ]
+  },
+  {
+    "id": "sizing_guide",
+    "title": "Sizing Chart & Fit Guide",
+    "section": "Section 3: Sizing & Fit Guide",
+    "keywords": [
+      "size",
+      "sizing",
+      "sizes",
+      "size chart",
+      "chart",
+      "measurement",
+      "measure",
+      "foot length",
+      "cm",
+      "fit",
+      "wide fit",
+      "eu size",
+      "us size",
+      "uk size"
+    ],
+    "patterns": [
+      "size\\s*chart",
+      "how\\s*to\\s*measure",
+      "what\\s*size",
+      "sizing",
+      "fit\\s*guide"
+    ],
+    "response": "### SOLE Size Conversion & Fit Guide\n\nAll SOLE shoes follow **UK sizing**. Here is our official conversion chart:\n\n* **UK 4** = EU 37 | US Men 5 | US Women 6.5 | **23.0 cm**\n* **UK 5** = EU 38 | US Men 6 | US Women 7.5 | **24.0 cm**\n* **UK 6** = EU 39 | US Men 7 | US Women 8.5 | **25.0 cm**\n* **UK 7** = EU 40.5 | US Men 8 | US Women 9.5 | **26.0 cm**\n* **UK 8** = EU 42 | US Men 9 | US Women 10.5 | **27.0 cm**\n* **UK 9** = EU 43 | US Men 10 | US Women 11.5 | **28.0 cm**\n* **UK 10** = EU 44.5 | US Men 11 | **29.0 cm**\n* **UK 11** = EU 45.5 | US Men 12 | **30.0 cm**\n* **UK 12** = EU 47 | US Men 13 | **31.0 cm**\n\n**How to Measure Your Foot:**\n1. Place heel against a flat wall on a piece of paper.\n2. Mark the tip of your longest toe with a pencil.\n3. Measure the distance in centimeters (cm) and match with the chart.\n\n*Fit Tip:* SOLE shoes fit true to size. If you have broader feet, wide-fit (W) options are available in Urban Runner and Flex Walk!",
+    "suggestions": [
+      "14-day exchange if size is wrong",
+      "Urban Runner sneaker",
+      "Delivery times"
+    ]
+  },
+  {
+    "id": "shipping_delivery",
+    "title": "Shipping Zones, Timeframes & Fees",
+    "section": "Section 5: Shipping & Delivery",
+    "keywords": [
+      "shipping",
+      "delivery",
+      "deliver",
+      "delivering",
+      "charges",
+      "shipping fee",
+      "delivery fee",
+      "delivery time",
+      "dispatch",
+      "free delivery",
+      "free shipping",
+      "courier",
+      "tcs",
+      "leopards",
+      "trax",
+      "call courier"
+    ],
+    "patterns": [
+      "deliver",
+      "shipping",
+      "how\\s*long.*deliver",
+      "delivery\\s*charges?",
+      "shipping\\s*rates?",
+      "couriers?",
+      "free\\s*shipping",
+      "dispatch"
+    ],
+    "response": "### Nationwide Delivery Across Pakistan\n\nWe deliver to all cities, towns, and regions in Pakistan:\n\n* **Karachi:** **1–2 Business Days** — PKR 150 *(Same-day available on select orders)*\n* **Major Cities (Lahore, Islamabad, Rawalpindi, Faisalabad):** **2–3 Business Days** — PKR 200\n* **Rest of Pakistan:** **3–5 Business Days** — PKR 300\n\n **FREE Delivery:** On all orders above **PKR 5,000** nationwide!\n\n* **Courier Partners:** TCS, Leopards, Trax, and Call Courier.\n* **Tracking:** You will receive an SMS and WhatsApp tracking link with your dispatch ID immediately upon shipping.",
+    "suggestions": [
+      "How to track my order?",
+      "Payment methods (COD available)",
+      "14-day exchange policy"
+    ]
+  },
+  {
+    "id": "order_tracking",
+    "title": "Order Tracking & Courier Updates",
+    "section": "Section 5.3: Order Tracking",
+    "keywords": [
+      "track",
+      "tracking",
+      "order status",
+      "where is my order",
+      "courier",
+      "dispatch status",
+      "tcs tracking"
+    ],
+    "patterns": [
+      "track.*order",
+      "where\\s*is\\s*my\\s*order",
+      "order\\s*status"
+    ],
+    "response": "### Tracking Your SOLE Order\n\n* **SMS & WhatsApp Tracking:** As soon as your order leaves our Karachi warehouse, an automatic tracking link with your Tracking ID (TCS/Leopards/Trax) will be sent to your phone number.\n* **Instant Tracking Support:** Send your Order ID or phone number to our WhatsApp support at **+92 300 SOLE PK (765 3 75)** and our team will provide live tracking updates.\n* **Dispatch Cutoff:** Orders placed before **2:00 PM (PKT)** are processed and dispatched on the same business day!",
+    "suggestions": [
+      "Delivery timeframes",
+      "Customer support contact",
+      "Payment methods"
+    ]
+  },
+  {
+    "id": "returns_exchanges",
+    "title": "Returns & 14-Day Exchanges Policy",
+    "section": "Section 6: Returns & Exchanges Policy",
+    "keywords": [
+      "return",
+      "returns",
+      "exchange",
+      "exchanges",
+      "refund",
+      "refunds",
+      "money back",
+      "change size",
+      "wrong size",
+      "defective",
+      "damage",
+      "policy",
+      "days"
+    ],
+    "patterns": [
+      "return\\s*policy",
+      "exchange\\s*policy",
+      "how\\s*to\\s*return",
+      "how\\s*to\\s*exchange",
+      "refund"
+    ],
+    "response": "### Hassle-Free Returns & Exchanges\n\n* **7-Day Return Policy:** You can return any online purchase within **7 days** of delivery for a full refund.\n * Must be unworn, unused, with all original tags intact and shoe box.\n* **14-Day Free Exchange Policy:** Size or color didn't fit? We offer a **100% FREE first exchange** within **14 days**! We will arrange courier pickup right from your doorstep.\n* **Defective or Wrong Item Received?** 100% free immediate replacement or full refund processed within **48 hours**.\n* **Refund Processing:**\n * Bank/Card: 5–7 business days.\n * COD Orders: Refunded via JazzCash, Easypaisa, or direct bank transfer within 3–5 business days.\n\n*Note: Items discounted above 40% are final sale.*",
+    "suggestions": [
+      "How to contact support for exchange",
+      "Size chart & fit guide",
+      "Delivery charges"
+    ]
+  },
+  {
+    "id": "payments",
+    "title": "Payment Methods & Installments",
+    "section": "Section 4.2: Payment Methods",
+    "keywords": [
+      "payment",
+      "pay",
+      "cod",
+      "cash on delivery",
+      "credit card",
+      "debit card",
+      "visa",
+      "mastercard",
+      "installment",
+      "installments",
+      "bank transfer",
+      "easypaisa",
+      "jazzcash"
+    ],
+    "patterns": [
+      "payment\\s*methods?",
+      "cash\\s*on\\s*delivery",
+      "\\\\bcod\\\\b",
+      "installments?",
+      "how\\s*to\\s*pay"
+    ],
+    "response": "### Secure Payment Methods\n\n* **Cash on Delivery (COD):** Available across Pakistan up to PKR 50,000. *(A small PKR 50 handling fee applies on COD orders below PKR 3,000).* \n* **Credit / Debit Cards:** Visa, Mastercard, and UnionPay accepted through encrypted 3D-secure checkout.\n* **Direct Bank Transfer:** Available at checkout with instant receipt verification.\n* **0% Markup Installments:** Available for 3 months on orders above **PKR 10,000** through partnered banks (Bank Alfalah, Faysal Bank, Silkbank).",
+    "suggestions": [
+      "How to place an order?",
+      "Delivery time & charges",
+      "Return policy"
+    ]
+  },
+  {
+    "id": "store_locations",
+    "title": "Physical Store Locations & Outlets",
+    "section": "Section 7: Store Locations",
+    "keywords": [
+      "store",
+      "stores",
+      "location",
+      "locations",
+      "outlet",
+      "outlets",
+      "shop",
+      "shops",
+      "branch",
+      "branches",
+      "where are you",
+      "address",
+      "visit",
+      "mall",
+      "dolmen",
+      "packages",
+      "centaurus",
+      "tariq road",
+      "clifton",
+      "gulberg"
+    ],
+    "patterns": [
+      "store",
+      "outlet",
+      "shop",
+      "branch",
+      "where\\s+are\\s+(you|your\\s+stores?)",
+      "physical\\s+location",
+      "addresses?"
+    ],
+    "response": "### SOLE Retail Outlets Across Pakistan\n\n**Karachi:**\n1. **Dolmen Mall Clifton:** First Floor, Shop 12 | +92 21 3456 7890\n2. **Tariq Road PECHS:** Commercial Area B-24 | +92 21 3456 7891\n3. **Gulshan-e-Iqbal:** Block 6, Main University Road | +92 21 3456 7892\n\n**Lahore:**\n1. **Gulberg III:** MM Alam Road, Block B | +92 42 3456 7893\n2. **Packages Mall:** Ground Floor, Walton Road | +92 42 3456 7894\n\n**Islamabad & Rawalpindi:**\n1. **Centaurus Mall:** 2nd Floor, F-8, Islamabad | +92 51 3456 7895\n2. **Saddar, Rawalpindi:** Bank Road | +92 51 3456 7897\n\n**Faisalabad:**\n* **Kohinoor City:** Jaranwala Road | +92 41 3456 7896\n\n **Timings:** Mon–Sun: 10:00 AM – 10:00 PM *(Fri: 3:00 PM – 11:00 PM)*",
+    "suggestions": [
+      "Store return policy",
+      "Urban Runner price",
+      "Contact support on WhatsApp"
+    ]
+  },
+  {
+    "id": "vouchers_guide",
+    "title": "Official SOLE Vouchers & Promo Codes",
+    "section": "Section 10: Vouchers & Discounts",
+    "keywords": [
+      "voucher",
+      "vouchers",
+      "promo code",
+      "promo codes",
+      "coupon",
+      "coupons",
+      "discount code",
+      "discount codes",
+      "first10",
+      "sole15",
+      "freeship",
+      "mini3for2",
+      "student500",
+      "vipsteps",
+      "codes",
+      "how to use voucher",
+      "redeem voucher"
+    ],
+    "patterns": [
+      "vouchers?",
+      "promo\\s*codes?",
+      "coupons?",
+      "discount\\s*codes?",
+      "how\\s*to.*redeem",
+      "how\\s*to.*apply.*voucher"
+    ],
+    "response": "### Official SOLE Vouchers & Promo Codes\n\nWe provide verified discount vouchers for our footwear community! You can view and copy all live coupons directly on our dedicated **Vouchers Page** at [/vouchers](/vouchers).\n\n* **'FIRST10'**: **10% OFF** your first order (No minimum spend required).\n* **'SOLE15'**: **15% OFF** on orders of PKR 8,000 or above.\n* **'FREESHIP'**: **100% FREE Delivery** across Pakistan on orders above PKR 5,000.\n* **'MINI3FOR2'**: **Buy 2, Get 1 FREE** on all Kids Mini Steps footwear.\n* **'STUDENT500'**: **PKR 500 Flat OFF** for college and university students (Min. spend PKR 4,500).\n* **'VIPSTEPS'**: **20% OFF** for SOLE Rewards VIP members (Min. spend PKR 12,000).\n\n**How to Redeem:**\n1. Copy any code above or visit [/vouchers](/vouchers).\n2. Select your shoes and proceed to Checkout.\n3. Paste the code into the voucher box at checkout and click Apply!",
+    "suggestions": [
+      "Available vouchers & promo codes",
+      "Urban Runner prices & colors",
+      "Delivery time & charges",
+      "Size chart"
+    ]
+  },
+  {
+    "id": "promotions",
+    "title": "Discounts, Promos & Ongoing Deals",
+    "section": "Section 10: Current Promotions & Discounts",
+    "keywords": [
+      "discount",
+      "discounts",
+      "promo",
+      "promo code",
+      "coupon",
+      "voucher",
+      "sale",
+      "offers",
+      "deal",
+      "deals",
+      "first10",
+      "save"
+    ],
+    "patterns": [
+      "discounts?",
+      "promo\\s*codes?",
+      "coupons?",
+      "vouchers?",
+      "sales?",
+      "offers?"
+    ],
+    "response": "### Current Offers & Discount Codes\n\nExplore all active deals on our dedicated **Vouchers Page** at [/vouchers](/vouchers):\n\n* **New Customer Welcome Code:** Use **`FIRST10`** at checkout for **10% OFF** your first order!\n* **Mini Steps Kids Promo:** **Buy 2, Get 1 FREE** on all kids shoes all year round!\n* **Free Shipping:** Automatic free shipping on all orders above **PKR 5,000**.\n* **Seasonal Sales:** Up to **50% OFF** during our Eid, Independence Day (August), and Blessed Friday (November) celebrations.\n\n*Policy: Only one promo code can be applied per checkout order.*",
+    "suggestions": [
+      "Complete product catalogue",
+      "How to order?",
+      "Delivery fees"
+    ]
+  },
+  {
+    "id": "loyalty_rewards",
+    "title": "SOLE Rewards Loyalty Program",
+    "section": "Section 9: SOLE Rewards Loyalty Program",
+    "keywords": [
+      "loyalty",
+      "rewards",
+      "points",
+      "membership",
+      "tier",
+      "bronze",
+      "silver",
+      "gold",
+      "earn points",
+      "redeem"
+    ],
+    "patterns": [
+      "loyalty",
+      "rewards?",
+      "points",
+      "membership"
+    ],
+    "response": "### SOLE Rewards Loyalty Club\n\n* **Earn Points:** Earn **1 point for every PKR 100** spent online and in-store.\n* **Point Value:** **1 point = PKR 1** discount applicable directly at checkout!\n\n**Membership Tiers:**\n* **Bronze (0 – 5,000 pts):** Standard earn rate + Birthday reward (500 bonus pts).\n* **Silver (5,001 – 15,000 pts):** **1.25x** points multiplier + early access to new drops.\n* **Gold (15,001+ pts):** **1.5x** points multiplier + **FREE delivery on all orders forever** + VIP helpline.\n\n*Points remain valid for 12 months from the date of earning.*",
+    "suggestions": [
+      "How to check my points?",
+      "Current discount codes",
+      "Store locations"
+    ]
+  },
+  {
+    "id": "shoe_care",
+    "title": "Shoe Care, Cleaning & Maintenance",
+    "section": "Section 8: Shoe Care & Maintenance",
+    "keywords": [
+      "care",
+      "clean",
+      "cleaning",
+      "wash",
+      "washing",
+      "maintain",
+      "brush",
+      "waterproof",
+      "leather care",
+      "suede",
+      "replace"
+    ],
+    "patterns": [
+      "how\\s*to\\s*clean",
+      "wash.*shoes?",
+      "shoe\\s*care",
+      "maintenance"
+    ],
+    "response": "### Official SOLE Shoe Care Guide\n\n* **Knit Mesh & Canvas (Urban Runner / Sport Elite):**\n * Clean with mild soap, lukewarm water, and a soft-bristled brush.\n * **Do NOT machine wash** or tumble dry. Air dry in shade away from direct sunlight.\n* **Leather (Flex Walk):**\n * Wipe clean with a soft damp microfiber cloth. Apply neutral leather balm or cream every 2–3 months.\n* **Suede:**\n * Use a dry suede brush in one direction only. Never use water directly on suede.\n* **When to Replace:** Running & athletic shoes should typically be retired after **500–800 km** of use to maintain optimal cushioning.",
+    "suggestions": [
+      "Urban Runner sneaker",
+      "Trekker Pro waterproof boots",
+      "Return & warranty"
+    ]
+  },
+  {
+    "id": "contact_support",
+    "title": "Customer Service & Contact Details",
+    "section": "Section 1.1 & 12.2: Brand Overview & Support",
+    "keywords": [
+      "contact",
+      "support",
+      "help",
+      "whatsapp",
+      "phone",
+      "email",
+      "helpline",
+      "representative",
+      "agent",
+      "call",
+      "human",
+      "complaint"
+    ],
+    "patterns": [
+      "contact",
+      "support",
+      "phone\\s*number",
+      "whatsapp",
+      "talk\\s*to\\s*human",
+      "helpline",
+      "email"
+    ],
+    "response": "### Reach SOLE Customer Support\n\nOur team is here to assist with orders, tracking, exchanges, and product recommendations:\n\n* **WhatsApp Support:** **+92 300 SOLE PK (+92 300 765375)** *(Fastest response)*\n* **Email Support:** **support@soleofficial.pk**\n* **UAN Helpline:** **+92 21 111 765 375**\n* **Operating Hours:** Monday to Saturday: **9:00 AM – 8:00 PM (PKT)**\n\n*All emails and WhatsApp inquiries are answered within 2 hours during business hours!*",
+    "suggestions": [
+      "Store locations",
+      "14-day exchange policy",
+      "Track an existing order"
+    ]
+  },
+  {
+    "id": "greeting",
+    "title": "Welcome to SOLE",
+    "section": "Section 1: Brand Welcome",
+    "keywords": [
+      "hello",
+      "hi",
+      "hey",
+      "salam",
+      "assalam",
+      "aoa",
+      "good morning",
+      "good afternoon",
+      "good evening"
+    ],
+    "patterns": [
+      "^(hi|hello|hey|salam|aoa|assalam.*|good\\s*(morning|evening|afternoon))"
+    ],
+    "response": " **Welcome to SOLE — Walk Your Story!**\n\nI am your official SOLE assistant. I am your official SOLE assistant, here with full details on shoe collections, active vouchers, sizing, and nationwide shipping.\n\nHere are the most popular topics I can help with:\n* **Shoe Lines & Prices** *(Urban Runner, Flex Walk, Trekker Pro, Grace, Mini Steps)*\n* **Delivery Times & Shipping Rates** *(Karachi, Lahore, Islamabad & Nationwide)*\n* **7-Day Returns & 14-Day Free Size Exchanges**\n* **Size Conversion & Measuring Guide**\n* **Store Locations & Opening Hours**\n\nWhat would you like to know today?",
+    "suggestions": [
+      "Urban Runner prices & colors",
+      "Delivery time to Lahore",
+      "14-day exchange policy",
+      "Size chart"
+    ]
+  },
+  {
+    "id": "faq_international",
+    "title": "International Shipping Policy",
+    "section": "Section 11.3: Shipping FAQs",
+    "keywords": [
+      "international",
+      "outside pakistan",
+      "worldwide",
+      "ship abroad",
+      "dubai",
+      "uk",
+      "usa"
+    ],
+    "patterns": [
+      "international",
+      "outside\\s*pakistan",
+      "worldwide",
+      "ship\\s*abroad"
+    ],
+    "response": "### International Shipping Policy\n\nCurrently, SOLE ships **exclusively within Pakistan** to ensure our express 1–3 day delivery and free return pickups.\n\n* **Future Expansion:** Nationwide delivery is our current focus; international shipping across GCC and UK is planned for **late 2026**.\n* If you are abroad and wish to send a gift to family in Pakistan, you can pay online via Visa/Mastercard with a Pakistan delivery address!",
+    "suggestions": [
+      "Delivery across Pakistan",
+      "Payment methods for overseas cards",
+      "Product catalogue"
+    ]
+  },
+  {
+    "id": "faq_cancellation",
+    "title": "Order Cancellation & Changes",
+    "section": "Section 11.1: Ordering FAQs",
+    "keywords": [
+      "cancel",
+      "cancellation",
+      "modify order",
+      "change address",
+      "wrong address",
+      "edit order"
+    ],
+    "patterns": [
+      "cancel.*order",
+      "modify.*order",
+      "change.*address"
+    ],
+    "response": "### Modifying or Cancelling Your Order\n\n* **Within 2 Hours:** You can modify product sizes, change delivery addresses, or cancel your order within **2 hours** of placement.\n* **How to Request:** Quickly send your Order ID to our WhatsApp team at **+92 300 SOLE PK (765 3 75)**.\n* **After Dispatch:** Once an order has been handed over to the courier (TCS/Leopards), it cannot be cancelled or re-routed, but you can utilize our **14-day free exchange policy** upon arrival!",
+    "suggestions": [
+      "Contact WhatsApp support",
+      "14-day exchange policy",
+      "Track an existing order"
+    ]
+  },
+  {
+    "id": "faq_warranty",
+    "title": "3-Month Manufacturing Warranty",
+    "section": "Section 11.6: Product Care & Warranty",
+    "keywords": [
+      "warranty",
+      "guarantee",
+      "sole separation",
+      "stitching",
+      "damaged",
+      "defect",
+      "quality guarantee"
+    ],
+    "patterns": [
+      "warranty",
+      "guarantee",
+      "manufacturing\\s*defect"
+    ],
+    "response": "### SOLE 3-Month Warranty Guarantee\n\nEvery pair of SOLE shoes undergoes **47 quality checkpoints** and comes with a **3-Month Manufacturing Warranty** against:\n\n* Sole separation or bond failure\n* Defective stitching or seam breakage\n* Eyelet or hardware failure under regular wear\n\n*If you experience any of these issues within 90 days, we will repair or replace your shoes completely free of charge.*",
+    "suggestions": [
+      "How to claim warranty",
+      "Shoe care & maintenance",
+      "Return policy"
+    ]
+  },
+  {
+    "id": "billing_and_invoices",
+    "title": "Billing, Invoices & Sales Tax (GST)",
+    "section": "Section 12: Order Billing & Invoices",
+    "keywords": [
+      "bill",
+      "billing",
+      "invoice",
+      "invoices",
+      "receipt",
+      "receipts",
+      "e-receipt",
+      "sales tax",
+      "gst",
+      "tax invoice",
+      "ntn",
+      "payment proof",
+      "slip",
+      "order total",
+      "charges breakup",
+      "billing address",
+      "where is my bill",
+      "how to get bill"
+    ],
+    "patterns": [
+      "bill(ing)?",
+      "invoice",
+      "receipt",
+      "sales\\s*tax",
+      "gst",
+      "tax\\s*breakup",
+      "where\\s+is\\s+my\\s+bill"
+    ],
+    "response": "### SOLE Official Billing, Invoices & Tax Policy\n\n* **Itemized Electronic Invoice:** An official digital invoice is automatically generated and sent to your registered **Email and WhatsApp** as soon as your order is confirmed.\n* **Physical Packing Slip:** Every parcel delivered to your doorstep contains a printed billing invoice and packing slip inside the shoe box, detailing order ID, shoes, sizes, and net amount.\n* **100% Tax Inclusive (Zero Hidden Fees):** All prices shown across our online store and retail outlets are **100% inclusive of all applicable GST and sales taxes**. You will never be charged unexpected taxes or extra fees at checkout!\n* **Itemized Billing Breakdown:** Your bill clearly outlines:\n  * Shoe price(s) and selected size\n  * Any applied voucher discount (e.g. `FIRST10` or `SOLE15`)\n  * Delivery charges (PKR 0 on orders above PKR 5,000)\n  * Final total payable amount\n* **Commercial & NTN Tax Invoices:** Need a corporate business invoice with our official NTN for company reimbursement? Send your Order ID and company details to **support@soleofficial.pk** or WhatsApp **+92 300 SOLE PK (765 3 75)**.",
+    "suggestions": [
+      "Payment methods (COD available)",
+      "How to track my order?",
+      "Available vouchers & promo codes"
+    ]
+  },
+  {
+    "id": "bank_transfer_billing",
+    "title": "Bank Transfer Slip Verification & Billing",
+    "section": "Section 12.1: Payment Proof & Slips",
+    "keywords": [
+      "bank transfer slip",
+      "payment slip",
+      "transfer receipt",
+      "payment screenshot",
+      "verify payment",
+      "bank proof",
+      "bill payment",
+      "easypaisa slip",
+      "jazzcash slip"
+    ],
+    "patterns": [
+      "(bank|transfer|payment|bill).*slip",
+      "(payment|transfer).*screenshot",
+      "verify.*payment"
+    ],
+    "response": "### Bank Transfer & Payment Slip Verification\n\nIf you choose **Direct Bank Transfer**, **Easypaisa**, or **JazzCash** at checkout:\n\n* **Instant Verification:** After transferring the amount, take a screenshot of your transaction receipt or payment slip and send it to our WhatsApp support at **+92 300 SOLE PK (765 3 75)** along with your Order ID.\n* **Verification Window:** Orders are verified within **15–30 minutes** during working hours (9:00 AM – 8:00 PM PKT).\n* **Dispatch:** Once your payment slip is verified, your electronic invoice is stamped 'PAID' and your shoes are dispatched on the same business day!",
+    "suggestions": [
+      "Customer support on WhatsApp",
+      "Payment methods (COD available)",
+      "How to track my order?"
+    ]
+  }
+]
