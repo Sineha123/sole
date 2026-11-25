@@ -108,7 +108,7 @@ export default function Navbar() {
               to={link.to}
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 15,
+                fontSize: 19,
                 letterSpacing: 3,
                 color: isActive(link.to) ? 'var(--red)' : (scrolled ? '#fff' : 'var(--text-secondary)'),
                 textDecoration: 'none',
@@ -142,7 +142,7 @@ export default function Navbar() {
             left: '50%',
             transform: 'translateX(-50%)',
             fontFamily: 'var(--font-display)',
-            fontSize: 32,
+            fontSize: 38,
             letterSpacing: 6,
             color: scrolled ? '#fff' : 'var(--text-primary)',
             textDecoration: 'none',
@@ -153,12 +153,12 @@ export default function Navbar() {
         >
           SOLE
           <span style={{
-            width: 6,
-            height: 6,
+            width: 7,
+            height: 7,
             borderRadius: '50%',
             background: 'var(--red)',
             marginLeft: 3,
-            marginBottom: 16,
+            marginBottom: 18,
             display: 'inline-block',
           }} />
         </Link>
@@ -235,7 +235,7 @@ export default function Navbar() {
           </button>
 
           {/* Login */}
-          <Link to="/login" style={{ color: scrolled ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'var(--font-mono)', fontSize: 13, letterSpacing: 2, fontWeight: 500 }}>
+          <Link to="/login" style={{ color: scrolled ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'var(--font-mono)', fontSize: 16, letterSpacing: 2, fontWeight: 500 }}>
             LOGIN
           </Link>
         </div>
