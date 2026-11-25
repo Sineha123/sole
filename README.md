@@ -81,4 +81,7 @@ SOLE uses a highly customized, high-contrast light theme.
 
 ---
 
+*"new changes "*
+
 *“Every shoe has a story — we want to help that story find its next chapter.”*
+
